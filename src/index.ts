@@ -21,7 +21,7 @@ export async function apply(ctx: Context) {
 
   await initializeDatabase(ctx);
 
-  ctx.using(['console','blockly'], (ctx) => {
+  ctx.using(['console', 'blockly','server'], (ctx) => {
     ctx.console.addEntry({
       dev: resolve(__dirname, '../client/index.ts'),
       prod: resolve(__dirname, '../dist'),
